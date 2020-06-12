@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useDebounce } from 'react-wonderful'
+import { useDebounce } from 'wonderhooks'
 
 const App = () => {
   const [value, setValue] = useState('')
