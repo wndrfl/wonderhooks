@@ -1,10 +1,10 @@
 {
-  "name": "react-wonderful",
+  "name": "wonderhooks",
   "version": "1.0.0",
   "description": "Useful Hooks developed and integrated by Wonderful",
   "author": "SamChami",
   "license": "MIT",
-  "repository": "wndrfl/react-wonderful",
+  "repository": "wndrfl/wonderhooks",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",

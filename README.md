@@ -1,13 +1,13 @@
-# react-wonderful
+# wonderhooks
 
 > Useful Hooks developed and integrated by Wonderful
 
-[![NPM](https://img.shields.io/npm/v/react-wonderful.svg)](https://www.npmjs.com/package/react-wonderful) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/wonderhooks.svg)](https://www.npmjs.com/package/wonderhooks) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
 ```bash
-yarn add react-wonderful
+yarn add wonderhooks
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ The debounce function delays the processing of the keyup event until the user ha
 
 ```jsx
 import React, { useState, useEffect } from 'react';
-import { useDebounce } from 'react-wonderful';
+import { useDebounce } from 'wonderhooks';
 
 const App = () => {
   const [value, setValue] = useState('')
