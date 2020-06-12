@@ -1,11 +1,17 @@
-import React from 'react'
-import { useMyHook } from 'react-wonderful'
+import React, { useState } from 'react'
+import { useDebounce } from 'react-wonderful'
 
 const App = () => {
-  const example = useMyHook()
+  const [value, setValue] = useState('')
+  const debounce = useDebounce(value, 2000)
+
   return (
     <div>
-      {example}
+      <input
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+      />
+      {debounce}
     </div>
   )
 }

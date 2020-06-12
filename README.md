@@ -7,28 +7,35 @@
 ## Install
 
 ```bash
-npm install --save react-wonderful
+yarn add react-wonderful
 ```
 
 ## Usage
 
+### useDebounce
+The debounce function delays the processing of the keyup event until the user has stopped typing for a set amount of time. This drastically reduces the number of automatic API calls sent to your server.
+
 ```jsx
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react';
+import { useDebounce } from 'react-wonderful';
 
-import { useMyHook } from 'react-wonderful'
+const App = () => {
+  const [value, setValue] = useState('')
+  const debounce = useDebounce(value, 2000)
 
-const Example = () => {
-  const example = useMyHook()
+  useEffect(() => {
+    // Called once value updates
+  }, debounce);
+
   return (
-    <div>{example}</div>
+    <input
+      value={value}
+      onChange={(e) => setValue(e.target.value)}
+    />
   )
 }
 ```
 
 ## License
 
-MIT © [SamChami](https://github.com/SamChami)
-
----
-
-This hook is created using [create-react-hook](https://github.com/hermanya/create-react-hook).
+MIT © [Wonderful](https://github.com/wndrfl)
