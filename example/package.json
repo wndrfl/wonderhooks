@@ -1,6 +1,5 @@
 {
-  "name": "react-wonderful-example",
-  "homepage": "https://SamChami.github.io/react-wonderful",
+  "name": "wonderhooks-example",
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
@@ -9,7 +8,7 @@
     "react": "link:../node_modules/react",
     "react-dom": "^16.9.0",
     "react-scripts": "^3.0.1",
-    "react-wonderful": "link:.."
+    "wonderhooks": "link:.."
   },
   "scripts": {
     "start": "react-scripts start",
