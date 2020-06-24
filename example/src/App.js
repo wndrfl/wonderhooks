@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
-import { useDebounce } from 'wonderhooks'
+
+import Debounce from './components/Debounce'
+import Typewriter from './components/Typewriter'
 
 const App = () => {
-  const [value, setValue] = useState('')
-  const debounce = useDebounce(value, 2000)
 
   return (
     <div>
-      <input
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-      />
-      {debounce}
+      <h1>useDebounce</h1>
+        <Debounce />
+      <h1>useTypewriter</h1>
+        <Typewriter />
     </div>
   )
 }
+
 export default App

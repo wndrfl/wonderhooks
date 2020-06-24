@@ -23,3 +23,35 @@ export const useDebounce = (value, delay) => {
 
   return debouncedValue
 }
+
+export const useTypewriter = (str, delay = 0) => {
+  const [writtenWord, setWrittenWord] = React.useState('')
+
+  /*
+    Recursively adds a letter to the returned string until there are no more
+    letters to add
+  */
+  const typeWord = (current, full, index) => {
+    if (current !== full) {
+      setTimeout(() => {
+        typeWord(full.substring(0, index + 1), full, index + 1)
+        setWrittenWord(full.substring(0, index + 1))
+      }, Math.round(Math.random() * 100)) // This 'humanizes' the typing
+    }
+  }
+
+  React.useEffect(() => {
+    if (writtenWord !== str) {
+      setTimeout(() => {
+        // Begin recursively adding letters
+        typeWord(writtenWord, str, 0)
+      }, delay)
+    }
+  }, [str])
+
+  if (writtenWord !== str) {
+    // This fakes the cursor effect when typewriter is "typing"
+    return `${writtenWord}|`
+  }
+  return writtenWord
+}

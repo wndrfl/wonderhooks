@@ -36,6 +36,24 @@ const App = () => {
 }
 ```
 
+### useTypewriter
+A visual effect that returns the string as if a person was typing it
+
+```jsx
+import React, { useState, useEffect } from 'react';
+import { useTypewriter } from 'wonderhooks';
+
+const App = () => {
+  const word = useTypewriter('Hello! Welcome to my example', 1000);
+
+  return (
+    <div>
+      {word}
+    </div>
+  )
+}
+```
+
 ## License
 
 MIT © [Wonderful](https://github.com/wndrfl)
