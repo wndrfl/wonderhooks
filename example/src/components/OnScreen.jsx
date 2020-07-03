@@ -8,7 +8,7 @@ export default () => {
   return (
     <div>
       <div>
-        The ref is {!onScreen ? 'on screen.' : 'not on screen.'}
+        (Scroll) Ref is {!onScreen ? 'on screen.' : 'not on screen.'}
       </div>
       <div style={{
         maxHeight: '100px',
