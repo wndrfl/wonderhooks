@@ -3,9 +3,15 @@ import React, { useState, useRef } from 'react'
 const Header = () => {
 
   return (
-    <div className="header">
+    <a href="//github.com/wndrfl/wonderhooks" className="header" target="_blank">
       <img src="../../wndrfl-logo.png" />
-    </div>
+      <h3>
+        Wonderhooks
+      </h3>
+      <h5>
+        A useful-ish Hooks Library
+      </h5>
+    </a>
   )
 }
 
